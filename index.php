@@ -18,4 +18,4 @@ for ($i=0; $i < 3; $i++) {
 print_r(readline_list_history());
 
 //dump variables
-print_r(readline_info());
+// print_r(readline_info());
