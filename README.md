@@ -18,3 +18,10 @@ WORKDIR /usr/src/pmm-parser
 COPY . .
 CMD ["php", "./index.php"]
 ```
+In terminal
+```docker
+docker images
+docker build -t pmm-test-cli .
+docker images
+docker run -it --rm --name pmm-test pmm-test-cli
+```
