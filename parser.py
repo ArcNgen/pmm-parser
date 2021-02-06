@@ -21,9 +21,9 @@ class Parser:
 
             table_number = self.get_table_number(txt_number)
             if table_number:
-                self.parse_text_string()
+                self.parse_text_string(table_number)
             
-    def parse_text_string(self):
+    def parse_text_string(self, table_number):
         txt_data_file = open('TXT_DATA/' + self.file_name, "r")
 
         for line in txt_data_file:
@@ -47,14 +47,13 @@ class Parser:
             value = self.get_suppression_value(suppression_code, value)
 
 
-
-            print(year + ' ' + month + ' ' + from1 + ' ' + product_code + ' ' + seller + ' ' + seller_type + ' ' + padd + ' ' + state + ' ' + data_type + ' ' + source_key + ' ' + suppression_code + ' ' + gen_code + ' ' + value)
+            print(table_number + ' - ' + year + ' ' + month + ' ' + from1 + ' ' + product_code + ' ' + seller + ' ' + seller_type + ' ' + padd + ' ' + state + ' ' + data_type + ' ' + source_key + ' ' + suppression_code + ' ' + gen_code + ' ' + value)
 
         txt_data_file.close()
     
     def get_suppression_value(self, suppression_code, value):
         display_value = value
-        
+
         suppression_dictionary = {
             '1' : 'W',
             '2' : 'NA',
