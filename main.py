@@ -28,7 +28,7 @@ for filename in os.listdir(directory):
         table_parser.parse_txt_data()
 
     bar.next()
-    pass
+
 print()
 bar.finish()
 print("Finished processing")
