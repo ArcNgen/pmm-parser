@@ -45,12 +45,12 @@ class Parser:
             
             value = line[20:30]
             value = value.lstrip('0')
-            value = self.get_suppression_value(suppression_code, value)
 
+            value = self.get_suppression_value(suppression_code, value)
             group_number = self.get_group_number(table_number, source_key, product_code)
 
 
-            print(table_number + ' - ' + group_number + ' ' + year + ' ' + month + ' ' + from1 + ' ' + product_code + ' ' + seller + ' ' + seller_type + ' ' + padd + ' ' + state + ' ' + data_type + ' ' + source_key + ' ' + suppression_code + ' ' + gen_code + ' ' + value)
+            # print(table_number + ' - ' + group_number + ' ' + year + ' ' + month + ' ' + from1 + ' ' + product_code + ' ' + seller + ' ' + seller_type + ' ' + padd + ' ' + state + ' ' + data_type + ' ' + source_key + ' ' + suppression_code + ' ' + gen_code + ' ' + value)
 
         txt_data_file.close()
     
